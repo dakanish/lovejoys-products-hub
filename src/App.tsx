@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Search, Info, Clock, AlertTriangle, ShieldCheck, X, Sparkles, CheckCircle2 } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { Search, Info, Clock, AlertTriangle, ShieldCheck, X, Sparkles } from 'lucide-react';
 import productsData from './data/products.json';
 
 interface Product {
@@ -25,7 +25,6 @@ export default function App() {
   }, []);
 
   // Multi-token instant search (Name OR FASTAKEY OR Variety OR ID)
-  // Plus special keyword triggers for watercress helper hints
   const filteredProducts = useMemo(() => {
     const trimmed = searchTerm.trim().toLowerCase();
     const tokens = trimmed.split(/\s+/).filter(Boolean);
@@ -102,7 +101,7 @@ export default function App() {
           </div>
         )}
 
-        {/* Updated SOP / Ordering Guidance Cards */}
+        {/* Operational Playbook & SOPs */}
         <section className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-xs font-semibold uppercase tracking-wider text-emerald-400/80 flex items-center gap-1.5">
