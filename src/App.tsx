@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Search, Info, Clock, AlertTriangle, ShieldCheck, X } from 'lucide-react';
 import productsData from './data/products.json';
 
